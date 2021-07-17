@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> WinTube </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="main.png"/>
+    <script src="https://unpkg.com/artplayer/dist/artplayer.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+<header id="titlebar">
+    <div id="drag-region">
+      <div id="window-controls">
+        <div class="button" id="min-button">
+          <img class="icon"
+            srcset="icons/min-k-10.png 1x, icons/min-k-12.png 1.25x, icons/min-k-15.png 1.5x, icons/min-k-15.png 1.75x, icons/min-k-20.png 2x, icons/min-k-20.png 2.25x, icons/min-k-24.png 2.5x, icons/min-k-30.png 3x, icons/min-k-30.png 3.5x"
+            draggable="false" />
+        </div>
+        <div class="button" id="max-button">
+          <img class="icon"
+            srcset="icons/max-k-10.png 1x, icons/max-k-12.png 1.25x, icons/max-k-15.png 1.5x, icons/max-k-15.png 1.75x, icons/max-k-20.png 2x, icons/max-k-20.png 2.25x, icons/max-k-24.png 2.5x, icons/max-k-30.png 3x, icons/max-kk-30.png 3.5x"
+            draggable="false" />
+        </div>
+        <div class="button" id="restore-button">
+          <img class="icon"
+            srcset="icons/restore-k-10.png 1x, icons/restore-k-12.png 1.25x, icons/restore-k-15.png 1.5x, icons/restore-k-15.png 1.75x, icons/restore-k-20.png 2x, icons/restore-k-20.png 2.25x, icons/restore-k-24.png 2.5x, icons/restore-k-30.png 3x, icons/restore-k-30.png 3.5x"
+            draggable="false" />
+        </div>
+        <div class="button" id="close-button">
+          <img class="icon"
+            srcset="icons/close-k-10.png 1x, icons/close-k-12.png 1.25x, icons/close-k-15.png 1.5x, icons/close-w-15.png 1.75x, icons/close-k-20.png 2x, icons/close-k-20.png 2.25x, icons/close-k-24.png 2.5x, icons/close-k-30.png 3x, icons/close-k-30.png 3.5x"
+            draggable="false" />
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="./icons/main.png" style="width:32px;height:32px;" class="icon">
+        &nbsp;
+        &nbsp;
+        <div class="logo_name"> Win<span class="logo_tube">Tube</span></div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Enter a URL">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-movie-play'></i>
+          <span class="links_name">Player</span>
+        </a>
+         <span class="tooltip">Player</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-bookmarks'></i>
+         <span class="links_name">Bookmarks</span>
+       </a>
+       <span class="tooltip">Bookmarks</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-history' ></i>
+         <span class="links_name">History</span>
+       </a>
+       <span class="tooltip">History</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Settings</span>
+       </a>
+       <span class="tooltip">Settings</span>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text" id="time" style="float:right !important;">00:00</div>
+      <div class="artplayer-app"></div>
+    <script>
+      var art = new Artplayer({
+        container: '.artplayer-app',
+        url: './test.mp4',
+        volume: 1,
+        isLive: false,
+        muted: false,
+        autoplay: false,
+        hotkey: true,
+        autoSize: true,
+        autoMini: true,
+        screenshot: true,
+        setting: true,
+        loop: true,
+        flip: true,
+        rotate: true,
+        playbackRate: true,
+        aspectRatio: true,
+        fullscreen: true,
+        subtitleOffset: true,
+        miniProgressBar: true,
+        networkMonitor: false,
+        mutex: true,
+        light: true,
+        backdrop: true,
+        theme: '#1781BC',
+        lang: navigator.language.toLowerCase(),
+      });
+    </script>
+  </section>
+
+  <script>require('./renderer.js')</script>
+
+</body>
+</html>

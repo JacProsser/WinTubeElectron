@@ -1,0 +1,15 @@
+{
+  "name": "WinTubeElectron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/JacProsser/WinTubeElectron",
+  "author": "JacProsser",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.4.0"
+  }
+}
